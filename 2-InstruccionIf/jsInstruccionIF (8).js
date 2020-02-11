@@ -8,7 +8,7 @@ function mostrar()
 
 	edad = document.getElementById("edad").value ; 
 
-	estado = document.getElementById("estadoCivil");
+	estado = document.getElementById("estadoCivil").value;
 
 	if (edad<18 && estado !=="Soltero") // Comparación  edad menor a 18 y estadocivil Distinto de "Soltero"//
 
