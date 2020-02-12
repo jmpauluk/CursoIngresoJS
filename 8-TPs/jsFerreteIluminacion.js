@@ -19,14 +19,14 @@ function CalcularPrecio ()
 
  	var descuento;
 
- 	var marca;
-
-
-
+ 	var marca = document.getElementById("Marca").value;
 
  	cantidadLamparas = document.getElementById('Cantidad').value;
 
- 	if (cantidadLamparas>=6 ) {
+
+
+ 	if (cantidadLamparas>=6 ) 
+ 	{
 
  		total= cantidadLamparas * precio 
 
@@ -37,17 +37,107 @@ function CalcularPrecio ()
  	}
 
 
- 	if (cantidadLamparas == 5 && marca=="ArgentinaLuz" )
+ 	if (cantidadLamparas==5 && marca=="ArgentinaLuz")
 
  	 {	
-       total = cantidadLamparas * precio 
+       total = cantidadLamparas * precio ;
 
-       descuento = total * 0.40 
+       descuento = total * 0.40 ;
 
-       document.getElementById("precioDescuento").value = total -descuento ;
- 	 }
+       document.getElementById("precioDescuento").value = total - descuento;
+
+     } 
 
 
+     else 
+    {
+     	if (cantidadLamparas==5)
+
+     	{
+     		total = cantidadLamparas * precio ;
+
+       		descuento = total * 0.30 ;
+
+       		document.getElementById("precioDescuento").value = total - descuento;
+
+     	}
+     }
 
 
-}
+     if ( cantidadLamparas == 4 && marca=="ArgentinaLuz" || marca=="“FelipeLamparas”")
+     {
+     	total = cantidadLamparas * precio ;
+
+     	descuento = total * 0.25 ;
+
+     	document.getElementById("precioDescuento").value = total - descuento;
+     }
+
+     else {
+     	  	if (cantidadLamparas==4)
+
+     	  	{
+     	  	   total = cantidadLamparas * precio ;
+
+     	  	   descuento = total * 0.20 ;
+
+     	  	   document.getElementById("precioDescuento").value = total - descuento;
+     	  	}
+
+    	  }
+
+
+    if (cantidadLamparas==3 && marca=="“FelipeLamparas”")
+    {
+    	total = cantidadLamparas * precio ;
+
+     	descuento = total * 0.10 ;
+
+     	document.getElementById("precioDescuento").value=descuento;
+
+    }	  	  
+
+    
+
+   	if (cantidadLamparas ==3 && marca=="ArgentinaLuz")
+
+   	{
+   		total = cantidadLamparas * precio ;
+
+     	descuento = total * 0.15 ;
+
+     	document.getElementById("precioDescuento").value = total - descuento;
+
+   	}	  	
+
+   
+   		if (cantidadLamparas==3 && marca=="FelipeLamparas") 
+
+   		{	
+
+   		total = cantidadLamparas * precio ;
+
+     	descuento = total * 0.10 ;
+
+     	document.getElementById("precioDescuento").value = total - descuento;
+
+   		}
+
+   		else
+   		{
+   			if (cantidadLamparas==3) 
+   			{
+   				total = cantidadLamparas * precio ;
+
+     			descuento = total * 0.05 ;
+
+     			document.getElementById("precioDescuento").value = total - descuento;
+   			}
+   		}
+
+   	
+
+   	
+
+
+} 
