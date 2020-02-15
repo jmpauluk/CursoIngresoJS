@@ -19,6 +19,8 @@ function CalcularPrecio ()
 
  	var descuento;
 
+  var precioFinal;
+
  	var marca = document.getElementById("Marca").value;
 
  	cantidadLamparas = document.getElementById('Cantidad').value;
@@ -32,7 +34,9 @@ function CalcularPrecio ()
 
  		descuento = total * 0.50  
 
- 		document.getElementById("precioDescuento").value = total -descuento ;  
+    precioFinal= total-descuento;
+
+ 		document.getElementById("precioDescuento").value = precioFinal ;  
 
  	}
 
@@ -44,7 +48,9 @@ function CalcularPrecio ()
 
        descuento = total * 0.40 ;
 
-       document.getElementById("precioDescuento").value = total - descuento;
+       precioFinal= total-descuento;
+
+       document.getElementById("precioDescuento").value = precioFinal;
 
      } 
 
@@ -58,7 +64,9 @@ function CalcularPrecio ()
 
        		descuento = total * 0.30 ;
 
-       		document.getElementById("precioDescuento").value = total - descuento;
+          precioFinal= total-descuento;
+
+       		document.getElementById("precioDescuento").value = precioFinal;
 
      	}
      }
@@ -70,7 +78,9 @@ function CalcularPrecio ()
 
      	descuento = total * 0.25 ;
 
-     	document.getElementById("precioDescuento").value = total - descuento;
+      precioFinal= total-descuento;
+
+     	document.getElementById("precioDescuento").value = precioFinal;
      }
 
      else {
@@ -81,7 +91,9 @@ function CalcularPrecio ()
 
      	  	   descuento = total * 0.20 ;
 
-     	  	   document.getElementById("precioDescuento").value = total - descuento;
+             precioFinal= total-descuento;
+
+     	  	   document.getElementById("precioDescuento").value = precioFinal;
      	  	}
 
     	  }
@@ -106,7 +118,9 @@ function CalcularPrecio ()
 
      	descuento = total * 0.15 ;
 
-     	document.getElementById("precioDescuento").value = total - descuento;
+      precioFinal= total-descuento;
+
+     	document.getElementById("precioDescuento").value = precioFinal;
 
    	}	  	
 
@@ -119,7 +133,9 @@ function CalcularPrecio ()
 
      	descuento = total * 0.10 ;
 
-     	document.getElementById("precioDescuento").value = total - descuento;
+      precioFinal= total-descuento;
+
+     	document.getElementById("precioDescuento").value =  precioFinal;
 
    		}
 
@@ -131,9 +147,21 @@ function CalcularPrecio ()
 
      			descuento = total * 0.05 ;
 
-     			document.getElementById("precioDescuento").value = total - descuento;
+          precioFinal= total-descuento;
+
+     			document.getElementById("precioDescuento").value = precioFinal;
    			}
    		}
+
+
+      if (precioFinal > 120)
+
+        {
+            descuento= precioFinal * 0.10
+
+            alert("usted pago " + precioFinal + " siendo " + descuento + " el impuesto que se pago");
+        }
+
 
    	
 
