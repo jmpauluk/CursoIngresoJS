@@ -1,13 +1,13 @@
 function mostrar()
 {
 	var n=10
-	
-		while(n!=0)
+
+	while(n!=0)
 		
-		{
-			n--;
-			alert(n);
-		}
+	{
+		n--;
+		alert(n);
+	} 
 
 
 }//FIN DE LA FUNCIÓN
